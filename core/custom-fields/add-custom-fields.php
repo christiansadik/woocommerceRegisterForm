@@ -1,13 +1,13 @@
 <?php
 function wc_register_custom_fields(){
-    global $activities;
+    global $types_activity;
     ?>
 <!-- SELECT CUSTOM ROLES -->
 <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
     <label for="reg_role"><?php _e( 'Sei un\'Azienda/Società (B2B) o un Privato (B2C)?', 'custom-register-form' ); ?>
         <span class="required">*</span></label>
     <select class="woocommerce-Input woocommerce-Input--text input-text" name="role" id="reg_role">
-        <option>Seleziona che cliente sei...</option>
+        <option value="" disabled selected hidden>- - Seleziona che cliente sei -- </option>
         <option <?php if ( ! empty( $_POST['role'] ) && $_POST['role'] == 'customer' ) esc_attr_e( 'selected' ); ?>
             value="customer"><?php _e( 'Privato', 'custom-register-form' ); ?></option>
         <option <?php if ( ! empty( $_POST['role'] ) && $_POST['role'] == 'sales_man' ) esc_attr_e( 'selected' ); ?>
@@ -28,8 +28,8 @@ function wc_register_custom_fields(){
                 class="required">*</span></label>
         <select class="woocommerce-Input woocommerce-Input--text input-text" name="type_activity"
             id="reg_type_activity">
-            <option>Seleziona il tipo di attività...</option>
-            <?php foreach ($activities as $key => $activity): ?>
+            <option value="" disabled selected hidden>-- Seleziona il tipo di attività --</option>
+            <?php foreach ($types_activity as $key => $activity): ?>
             <option
                 <?php if ( ! empty( $_POST['type_activity'] ) && $_POST['type_activity'] == $key ) esc_attr_e( 'selected' ); ?>
                 value="<?php echo $key; ?>"><?php echo $activity; ?></option>
@@ -56,7 +56,7 @@ function wc_register_custom_fields(){
     </p>
 </div>
 
-<!-- ADDRESS  -->
+<!-- GENERAL INFO (ADDRESS AND PHONE)  -->
 <div id="form-address">
     <?php
     $countries = new WC_Countries();
