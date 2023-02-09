@@ -18,3 +18,41 @@ define('PLUGIN_URI', dirname(__FILE__) );
  */
 require 'core/functions.php';
 require 'core/scripts.php';
+require 'core/custom-fields/add-custom-fields.php';
+require 'core/custom-fields/error-message.php';
+
+
+/** CUSTOM ROLES*/
+$custom_roles = array(
+    'sales_man'     => __('Agente', 'custom-register-form'),
+    'company'       => __('Azienda', 'custom-register-form'),
+    'distributor'   => __('Distributore', 'custom-register-form'),
+    'dealer'        => __('Rivenditore', 'custom-register-form'),
+);
+
+/** TYPES OF ACTIVITY */
+$types_activity = array(
+    'agent'                     => __( 'Agente', 'custom-register-form' ),
+    'camping'                   => __( 'Campeggio', 'custom-register-form' ),
+    'water_center'              => __( 'Centro acquatico', 'custom-register-form' ),
+    'rehabilitation_center'     => __( 'Centro di riabilitazione', 'custom-register-form' ),
+    'fitness_with_pool'         => __( 'Centro fitness con piscina', 'custom-register-form' ),
+    'fitness_without_pool'      => __( 'Centro fitness senza piscina', 'custom-register-form' ),
+    'sportiv_center'            => __( 'Centro sportivo', 'custom-register-form' ),
+    'builder'                   => __( 'Costruttore', 'custom-register-form' ),
+    'distributor'               => __( 'Distributore', 'custom-register-form' ),
+    'sports_federation'         => __( 'Federazione sportiva', 'custom-register-form' ),
+    'hotel'                     => __( 'Hotel', 'custom-register-form' ),
+    'water_park'                => __( 'Parco acquatico', 'custom-register-form' ),
+    'public_administration'     => __( 'Pubblica Amministrazione', 'custom-register-form'),
+    'resort'                    => __( 'Resort', 'custom-register-form' ),
+    'dealer'                    => __( 'Rivenditore', 'custom-register-form' ),
+    'service_company'           => __( 'Società di servizi', 'custom-register-form' ),
+    'sports_club'               => __( 'Società / Associazione Sportiva', 'custom-register-form'),
+    'beach_resort'              => __( 'Stabilimento balneare', 'custom-register-form' ),
+    'thermal_baths'             => __( 'Stabilimento termale', 'custom-register-form' ),
+    'tourist_resort'            => __( 'Villaggio turistico', 'custom-register-form' ),
+    'coach'                     => __( 'Istruttore / Allenatore', 'custom-register-form' ),
+    'private'                   => __( 'Privato', 'custom-register-form' )
+  );
+
