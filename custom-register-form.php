@@ -21,6 +21,7 @@ require 'core/scripts.php';
 require 'core/custom-fields/add-custom-fields.php';
 require 'core/custom-fields/error-message.php';
 require 'core/custom-fields/save-custom-fields.php';
+require 'core/custom-fields/show-values-custom-fields.php';
 
 
 /** CUSTOM ROLES*/
